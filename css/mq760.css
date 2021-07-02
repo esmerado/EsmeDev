@@ -1,0 +1,11 @@
+@media screen and (max-width: 768px) {
+    .div-info-about {
+        margin-top: -20em;
+    }
+    #profile-skills {
+        margin-top: 0;
+    }
+    .skill-div h4 {
+        margin-top: 2em;
+    }
+}

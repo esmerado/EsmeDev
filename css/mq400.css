@@ -1,0 +1,27 @@
+    @media screen and (max-width: 420px) {
+        .image-card {
+            width: 20em;
+            height: 10.625em;
+        }
+        .image-card2 {
+            width: 20em;
+            height: 10.625em;
+        }
+        .image-card3 {
+            width: 20em;
+            height: 10.625em;
+        }
+        .image-card4 {
+            width: 20em;
+            height: 10.625em;
+        }
+        .info-card {
+            width: 20em;
+            height: 10.625em;
+        }
+        .btn-info {
+            margin-top: 5em;
+            padding: 0.3em;
+            width: 12.5;
+        }
+    }

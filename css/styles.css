@@ -1,0 +1,686 @@
+:root {
+    --color1: #212529;
+    --color2: #E8E2E0;
+    --color3: #8A7D78;
+    --color4: #F2EFF0;
+}
+
+*::-webkit-scrollbar {
+    background: var(--color2);
+    width: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: var(--color1);
+    border-radius: 5px;
+    border-right: 0px solid var(--color2);
+}
+
+div.row {
+    margin-right: 0px;
+}
+
+div.container-fluid {
+    padding-right: 0px;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    /* overflow-x: hidden; */
+    scroll-behavior: smooth;
+}
+
+
+/* Menu Toggle Hamburger */
+
+.menu-btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    border: none;
+    margin-top: 3em;
+}
+
+.menu-btn__burger {
+    width: 40px;
+    height: 2px;
+    position: absolute;
+    background: var(--color2);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+    transition: all .3s ease-in-out;
+}
+
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 2px;
+    background: var(--color2);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+    transition: all .3s ease-in-out;
+}
+
+.menu-btn__burger::before {
+    transform: translateY(-16px);
+}
+
+.menu-btn__burger::after {
+    transform: translateY(16px);
+}
+
+.menu-btn.open .menu-btn__burger {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+}
+
+.menu-btn.open .menu-btn__burger::before {
+    transform: rotate(45deg) translate(35px, -35px);
+}
+
+.menu-btn.open .menu-btn__burger::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+}
+
+.list-menu-div a {
+    text-decoration: none;
+    color: var(--color2);
+}
+
+.list-menu-div a:focus,
+.list-menu-div a:active,
+.list-menu-div a:visited {
+    color: var(--color2);
+}
+
+.list-menu-div h4 {
+    transition: all .5s;
+}
+
+.list-menu-div h4:hover {
+    transform: rotateY(15deg);
+}
+
+
+/* Header */
+
+header h2,
+header h1 {
+    color: var(--color2);
+}
+
+header h2 {
+    font-size: 1.1em;
+}
+
+header {
+    text-align: center;
+}
+
+.btn1,
+.btn2 {
+    padding: 15px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+    font-size: 1em;
+    margin: 20px;
+    width: 200px;
+    background: var(--color1);
+    border: 2px solid var(--color3);
+    letter-spacing: 0.2em;
+    transition: all .5s;
+}
+
+.btn1 a,
+.btn2 a {
+    color: var(--color2);
+    text-decoration: none;
+    font-weight: 100;
+}
+
+.btn1:hover,
+.btn2:hover {
+    border-color: var(--color2);
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.btn1 a:focus,
+.btn2 a:focus,
+.btn1 a:active,
+.btn2 a:active,
+.btn1 a:visited,
+.btn2 a:visited,
+.btn1 a:hover,
+.btn2 a:hover {
+    color: var(--color2);
+    text-decoration: none;
+}
+
+.social-media i {
+    transition: all .5s;
+    cursor: pointer;
+    padding: 1em;
+    font-size: 2em;
+    margin-top: 4em;
+    margin-bottom: 4em;
+}
+
+.social-media i:hover {
+    transform: rotate(15deg);
+}
+
+.icon-social {
+    color: var(--color2);
+}
+
+
+/* About Section */
+
+#about {
+    background-color: var(--color2);
+}
+
+#about h4 {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+#about img {
+    height: 40%;
+}
+
+#about p {
+    text-align: justify;
+}
+
+
+/* Profile and Skills */
+
+#profile-skills {
+    background-color: var(--color2);
+    margin-top: -12em;
+}
+
+#profile-skills ul,
+#profile-skills li,
+ol {
+    list-style: none;
+    line-height: 2em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-bottom: 1.5em;
+    color: var(--color1);
+    padding-left: 0;
+}
+
+#profile-skills H4 {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: var(--color1);
+    margin-bottom: 3em;
+}
+
+.div-ps {
+    margin-bottom: 20em;
+}
+
+.skill-bars .bar {
+    margin: 20px 0;
+}
+
+.skill-bars .bar:first-child {
+    margin-top: 0px;
+}
+
+.skill-bars .bar .info {
+    margin-bottom: 5px;
+}
+
+.skill-bars .bar .info span {
+    font-weight: 500;
+    font-size: 17px;
+    opacity: 0;
+    animation: showText 0.5s 1s linear forwards;
+}
+
+@keyframes showText {
+    100% {
+        opacity: 1;
+    }
+}
+
+.skill-bars .bar .progress-line {
+    height: 10px;
+    width: 350px;
+    background: var(--color4);
+    position: relative;
+    transform: scaleX(0);
+    transform-origin: left;
+    border-radius: 10px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.8);
+    animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+@keyframes animate {
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+.bar .progress-line span {
+    height: 100%;
+    position: absolute;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    background: var(--color3);
+    animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+.bar .progress-line.html span {
+    width: 95%;
+}
+
+.bar .progress-line.java span {
+    width: 95%;
+}
+
+.bar .progress-line.angular span {
+    width: 65%;
+}
+
+.bar .progress-line.sql span {
+    width: 80%;
+}
+
+.bar .progress-line.kotlin span {
+    width: 60%;
+}
+
+.bar .progress-line.python span {
+    width: 60%;
+}
+
+.progress-line span::before {
+    position: absolute;
+    content: "";
+    top: -10px;
+    right: 0;
+    height: 0;
+    width: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-top-color: var(--color1);
+    opacity: 0;
+    animation: showText2 0.5s 1.5s linear forwards;
+}
+
+.progress-line span::after {
+    position: absolute;
+    top: -28px;
+    right: 0;
+    font-weight: 500;
+    background: var(--color1);
+    color: #fff;
+    padding: 1px 8px;
+    font-size: 12px;
+    border-radius: 3px;
+    opacity: 0;
+    animation: showText2 0.5s 1.5s linear forwards;
+}
+
+@keyframes showText2 {
+    100% {
+        opacity: 1;
+    }
+}
+
+.progress-line.html span::after {
+    content: "95%";
+}
+
+.progress-line.java span::after {
+    content: "95%";
+}
+
+.progress-line.angular span::after {
+    content: "65%";
+}
+
+.progress-line.sql span::after {
+    content: "80%";
+}
+
+.progress-line.kotlin span::after {
+    content: "60%";
+}
+
+.progress-line.python span::after {
+    content: "60%";
+}
+
+
+/* My projects */
+
+#projects {
+    background-color: var(--color2);
+}
+
+#projects h4 {
+    margin-bottom: 2em;
+    width: 100%;
+}
+
+.image-card {
+    background-image: url(../img/formula-1-Carlos.jpg);
+    width: 25em;
+    height: 15.625em;
+    background-size: 100%;
+    display: flex;
+    background-position: center;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.8);
+    transition: all .5s;
+    margin-bottom: 2.5em;
+}
+
+.image-card2 {
+    background-image: url(../img/node-js.jpeg);
+    width: 25em;
+    height: 15.625em;
+    background-size: 100%;
+    display: flex;
+    background-position: center;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.8);
+    transition: all .5s;
+    margin-bottom: 2.5em;
+}
+
+.image-card3 {
+    background-image: url(../img/Java.jpg);
+    width: 25em;
+    height: 15.625em;
+    background-size: 100%;
+    display: flex;
+    background-position: center;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.8);
+    transition: all .5s;
+    margin-bottom: 2.5em;
+}
+
+.image-card4 {
+    background-image: url(../img/coming-soon.jpg);
+    width: 25em;
+    height: 15.625em;
+    background-size: 100%;
+    display: flex;
+    background-position: center;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.8);
+    transition: all .5s;
+    margin-bottom: 2.5em;
+}
+
+.info-card {
+    width: 25em;
+    height: 15.625em;
+    background-color: rgba(43, 42, 43, 0.9);
+    opacity: 0;
+    position: absolute;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s;
+}
+
+.image-card:hover .info-card {
+    opacity: 1;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.image-card2:hover .info-card {
+    opacity: 1;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.image-card3:hover .info-card {
+    opacity: 1;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.image-card4:hover .info-card {
+    opacity: 1;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.image-card:hover {
+    background-size: 110%;
+}
+
+.image-card2:hover {
+    background-size: 110%;
+}
+
+.image-card3:hover {
+    background-size: 110%;
+}
+
+.image-card4:hover {
+    background-size: 110%;
+}
+
+.headline {
+    font-size: 2em;
+    position: absolute;
+    color: var(--color2);
+    margin-top: -1.5em;
+    transition: all .5s;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 100;
+    letter-spacing: 2px;
+}
+
+.image-card:hover .headline {
+    opacity: 1;
+    font-size: 1.6em;
+}
+
+.btn-info {
+    margin-top: 7em;
+    padding: 0.8em;
+    border: 1px solid var(--color2);
+    border-radius: 7px;
+    background: none;
+    font-weight: 100;
+    letter-spacing: 2px;
+    width: 12.5;
+    transition: all .5s;
+}
+
+.btn-info a {
+    text-decoration: none;
+    color: var(--color2);
+}
+
+.btn-info:hover {
+    letter-spacing: 4.5px;
+}
+
+
+/* Contact Form */
+
+#contact h4 {
+    color: var(--color2);
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+label,
+input,
+textarea {
+    display: block;
+    background: none;
+    border: var(--color1);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 100;
+}
+
+input,
+textarea {
+    border-bottom: 1px solid var(--color2);
+    width: 300px;
+}
+
+input:focus~label,
+input:valid~label,
+textarea:focus~label,
+textarea:valid~label {
+    position: absolute;
+    top: -14px;
+    font-size: 12px;
+    color: var(--color2);
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    color: rgb(94, 93, 93);
+}
+
+label {
+    padding: 20px;
+    color: var(--color2)
+}
+
+input:focus~.barra::before,
+textarea:focus~.barra::before {
+    width: 100%;
+}
+
+.barra {
+    display: flex;
+    width: 35vw;
+    padding: 10px;
+}
+
+.barra::before {
+    content: '';
+    height: 2px;
+    width: 0%;
+    bottom: 0;
+    position: absolute;
+    background: var(--color3);
+    transition: 0.3s ease all;
+    left: 0%;
+}
+
+.btn-form {
+    background: var(--color2);
+    display: block;
+    width: 35vw;
+    height: 5vh;
+    border: none;
+    color: var(--color1);
+    border-radius: 4px;
+    font-size: 16px;
+    margin: 20px;
+    cursor: pointer;
+    transition: all .5s;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.btn-form:hover {
+    border: solid 1px var(--color2);
+    color: var(--color2);
+    background: none;
+}
+
+.form-div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -12em;
+}
+
+.status {
+    color: #FA3D3D;
+    margin-top: 10px;
+}
+
+.form-div h4 {
+    color: var(--color2);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 300;
+    font-size: 3em;
+    margin-bottom: 2em;
+    margin-top: 5em;
+}
+
+.ft-last {
+    margin-top: 10em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ft-last p {
+    color: var(--color2);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-top: 4em;
+}
+
+.ft-last button {
+    border: 1px solid var(--color2);
+    background: none;
+    color: var(--color2);
+    width: 13vw;
+    height: 5vh;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    font-size: 1.1em;
+    transition: all .5s ease-in-out;
+}
+
+.ft-last button:hover {
+    border: 1px solid var(--color1);
+    background-color: var(--color2);
+}
+
+.ft-last a {
+    text-decoration: none;
+    color: var(--color2);
+    transition: all .5s;
+}
+
+.ft-last button:hover>a {
+    color: var(--color1)
+}
